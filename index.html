@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova DWA</title>
+    
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+    <script src="./scripts/jquery-3.5.1.min.js"></script>
+    <script src="./scripts/jquery.mask.js"></script>
+    <script src="./app.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <form class="row" class="form">
+            <div class="col-12" style="margin-bottom: 10px;">
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" name="nome" class="form-control" required>
+            </div class=>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tipo-pessoa">Tipo pessoa: </label> <br>
+                        <input id="pessoa-fisica" type="radio" name="tipo-pessoa" checked onclick="setMask('cpf')"> Fisica
+                        <input id="pessoa-juridica" type="radio" name="tipo-pessoa" onclick="setMask('cnpj')"> Jurídica
+                    </div>
+                    <div class="col-3">
+                        <label id="cpf-cnpj-label" for="cpf">CPF</label>
+                        <input id="cpf-cnpj" type="text" name="cpf" class="form-control" required>
+                    </div>
+                    <div class="col-2">
+                        <label for="cep">CEP: </label>
+                        <input id="cep" type="text" name="cep" class="form-control" required>
+                    </div>
+                    <div class="col-3">
+                        <label for="estado">Estado: </label>
+                        <select id="estado" name="estado" class="form-control" required>
+                            <option value=""></option>
+                            <option value="Minas Gerais">MG</option>
+                            <option value="São Paulo">SP</option>
+                            <option value="Rio de Janeiro">RJ</option>
+                            <option value="Espírito Santo">ES</option>
+                        </select>
+                    </div>
+                    <div class="col-2" id="btn-group">
+                        <button id="submit" type="submit" class="btn btn-success">Enviar</button>
+                        <button id="reset"  type="reset" class="btn btn-primary">Limpar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <span id="msg"></span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
